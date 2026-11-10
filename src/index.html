@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hora Médica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <p class="marca">Centro Médico</p>
+    </header>
+
+    <main class="contenedor">
+        <section class="informacion" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Reserva tu hora médica</h1>
+            <p>Completa tus datos para solicitar una hora. Recibirás una confirmación una vez enviada la reserva.</p>
+            <p class="estado"><strong>Especialidades:</strong> Medicina General, Pediatría, Ginecología, Cardiología, Dermatología y Odontología.</p>
+        </section>
+
+        <form method="POST" class="formulario">
+            <h2>Datos de la reserva</h2>
+
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="campo">
+                <label for="fecha">Fecha de la cita</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="campo">
+                <label for="hora">Hora de la cita</label>
+                <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <div class="campo ancho-completo">
+                <label for="especialidad">Especialidad médica</label>
+                <select id="especialidad" name="especialidad" required>
+                    <option value="">Selecciona una especialidad</option>
+                    <option value="medicina_general">Medicina General</option>
+                    <option value="pediatria">Pediatría</option>
+                    <option value="ginecologia">Ginecología</option>
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="odontologia">Odontología</option>
+                </select>
+            </div>
+
+            <button type="submit">Reservar hora</button>
+        </form>
+        <p class="nota">Demostración académica</p>
+    </main>
+</body>
+</html>
