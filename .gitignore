@@ -1,1 +1,8 @@
 .gradle/
+
+.env
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

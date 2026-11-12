@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    container_name: reservas-medicas
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:80"
+    restart: unless-stopped
